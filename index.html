@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Config Files</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid #eee;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    li { margin-bottom: 0.4rem; }
+    .section { margin-bottom: 2rem; }
+    .locked-file-card {
+      margin-top: 3rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .locked-file-main {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .locked-file-icon {
+      font-size: 1.4rem;
+    }
+    .locked-file-meta strong {
+      display: block;
+      font-size: 1rem;
+    }
+    .locked-file-meta span {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .locked-file-actions {
+      display: flex;
+      gap: 0.6rem;
+    }
+    .locked-file-actions a {
+      text-decoration: none;
+    }
+    .locked-file-actions button {
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 0.95rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+    }
+    .unlock-btn { background: #111827; }
+    .buy-btn { background: #2563eb; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      font-size: 0.85rem;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Config Files</h1>
+
+  <div class="section">
+    <h2>1. ESP / Wallhack</h2>
+    <p>Wallhacks exploit the rendering pipeline by reading entity positions from game memory before the occlusion culling stage. The cheat hooks into DirectX, OpenGL, or Vulkan draw calls to draw bounding boxes, skeletons, or health bars through walls.</p>
+    <p>Because the game engine knows where every player is at all times (to handle networking and physics), this data exists in memory. The cheat simply reads it before the graphics card decides what should be visible on screen.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Aimbot / Aim Lock</h2>
+    <p>An aimbot reads enemy coordinates from memory, calculates the angle between the player's crosshair and the target, then either simulates mouse input or writes directly to the game's view angles.</p>
+    <ul>
+      <li><strong>Aim Lock:</strong> Instantly snaps the crosshair to the target. Easy to detect due to inhuman speed and precision.</li>
+      <li><strong>Smooth Aim:</strong> Uses interpolation to move the mouse gradually, mimicking human reaction time and muscle movement.</li>
+      <li><strong>Auto Headshot:</strong> Targets the head bone from the entity skeleton data, accounting for bullet drop, travel time, and target velocity.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. Aim Assist</h2>
+    <p>Aim assist is a subtler version that only activates when the player is already near the target. It uses an FOV (Field of View) check — if the target is within a set cone in front of the player, the cheat applies a slight "pull" toward the target.</p>
+    <p>This makes it much harder to detect because the player still has to aim roughly in the right direction, and the adjustments are small enough to look like natural micro-corrections.</p>
+  </div>
+
+  <section class="locked-file-card">
+    <div class="locked-file-main">
+      <div class="locked-file-icon">🔒</div>
+      <div class="locked-file-meta">
+        <strong>Locked File</strong>
+        <span>200 MB • Protected content</span>
+      </div>
+    </div>
+    <div class="locked-file-actions">
+      <a href="https://paystack.shop/pay/2vf-0zum3b" target="_blank" rel="noopener noreferrer">
+        <button class="unlock-btn" type="button">Unlock ₦5,400</button>
+      </a>
+      <a href="https://paystack.shop/pay/2vf-0zum3b" target="_blank" rel="noopener noreferrer">
+        <button class="buy-btn" type="button">Buy Now ₦5,400</button>
+      </a>
+    </div>
+  </section>
+</body>
+</html>
